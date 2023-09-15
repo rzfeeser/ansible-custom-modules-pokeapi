@@ -1,0 +1,17 @@
+---
+- name: example playbook using pokeapi module
+  connection: local
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: make a call to pokeapi
+      #rzfeeser.pokemon.pokeapi_info:
+      pokeapi_info:
+        resource: pokemon      # (group) describes the resource or group within the pokeapi.co service the user wants
+        name: pikachu          # (id) describes the name or id within the resource to search on
+      register: results
+
+    - name: display pokemon results
+      ansible.builtin.debug:
+        var: results
