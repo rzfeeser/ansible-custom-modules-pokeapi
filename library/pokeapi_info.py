@@ -79,7 +79,9 @@ def run_module():
     # define available arguments/parameters a user can pass to the module
     module_args = dict(
         name=dict(type='str', required=True),
-        resource=dict(type='str', required=True)
+        resource=dict(type='str', required=True),
+        limit=dict(type='int', required=False),
+        offset=dict(type='int', required=False)
     )
 
     # seed the result dict in the object
@@ -108,7 +110,16 @@ def run_module():
     if module.check_mode:
         module.exit_json(**result)
 
-    resp = requests.get(f"https://pokeapi.co/api/v2/{{ module.params['resource'] }}/{{ module.params['name'] }}")
+    poke_url = f"https://pokeapi.co/api/v2/{{ module.params['resource'] }}/{{ module.params['name'] }}?"
+
+    # did they include a limit parameter
+    if module.params['limit']:
+        poke_url = f"{poke_url}limit={module.params['limit']}&"
+    if module.params['offset']:
+        poke_url = f"{poke_url}offset={module.params['offset']}&"
+
+    
+    resp = requests.get(poke_url)
     
     pokemon_info = resp.json()
 
