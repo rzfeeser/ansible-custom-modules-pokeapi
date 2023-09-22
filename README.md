@@ -5,4 +5,4 @@ Ansible module(s) to interact with API service @ pokeapi.co
 
 ### Install Procedure
 
-- Install from GitHub - `ansible-galaxy install git+https://github.com/rzfeeser/ansible-custom-modules-pokeapi`
+- Install rzfeeser.pokeapi collection directly from GitHub - `ansible-galaxy collection install git+https://github.com/rzfeeser/ansible-custom-modules-pokeapi`

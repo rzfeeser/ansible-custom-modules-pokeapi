@@ -18,20 +18,23 @@ version_added: "1.0.0"
 description: This module was written to simplify interaction with pokeapi.co/v2 API. See pokeapi.co for documentation on using the v2 API.
 
 options:
-    name:
-        description: This is the message to send to the test module.
+    resource:
+        description: This is the resource to lookup. See pokeapi.co/docs/v2 for all possible values. Values include 'ability', 'berry', 'berry-firmness', 'berry-flavor', 'characteristic', 'contest-effect', 'contest-type', 'egg-group', 'encounter-condition', 'encounter-condition-value', 'encounter-method', 'evolution-chain', 'evolution-trigger', 'gender', 'generation', 'growth-rate', 'item', 'item-attribute', 'item-category', 'item-fling-effect', 'item-pocket', 'language', 'location', 'location-area', 'machine', 'move', 'move-ailment', 'move-battle-style', 'move-category', 'move-damage-class', 'move-learn-method', 'move-target', 'nature', 'pal-park-area', 'pokeathlon-stat', 'pokedex', 'pokemon', 'pokemon-color', 'pokemon-form', 'pokemon-habitat', 'pokemon-shape', 'pokemon-species', 'region', 'stat', 'super-contest-effect', 'type', 'version', 'version-group'
         required: true
         type: str
-    new:
-        description:
-            - Control to demo if the result of this module is changed or not.
-            - Parameter description can be a list as well.
+    name:
+        description: The name of the resource to lookup. See pokeapi.co/docs/v2 for all possible values.
         required: false
-        type: bool
-# Specify this value according to your collection
-# in format of namespace.collection.doc_fragment_name
-# extends_documentation_fragment:
-#     - my_namespace.my_collection.my_doc_fragment_name
+        type: str
+    limit:
+        description: The number of results that will be returned with the lookup.
+        required: false
+        type: int
+    offset:
+        description: The resource index + 1 to begin at. For example, If 42 is passed, then resource 43 will be the first result returned.
+        required: false
+        type: int
+
 
 author:
     - Russell Zachary Feeser (@rzfeeser)

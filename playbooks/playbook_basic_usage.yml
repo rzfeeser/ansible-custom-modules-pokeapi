@@ -4,10 +4,12 @@
   hosts: localhost
   gather_facts: false
 
+  collections:
+    - rzfeeser.pokeapi
+
   tasks:
     - name: make a call to pokeapi
-      #rzfeeser.pokemon.pokeapi_info:
-      pokeapi_info:
+      rzfeeser.pokeapi.pokeapi_info:
         resource: pokemon      # (group) describes the resource or group within the pokeapi.co service the user wants
         name: pikachu          # (id) describes the name or id within the resource to search on
       register: results
@@ -18,7 +20,7 @@
 
 
     - name: make a call to pokeapi with limit of 10 and offset of 100
-      pokeapi_info:
+      rzfeeser.pokeapi.pokeapi_info:
         resource: pokemon
         limit: 100      # stop at 142 (limit to 100 results)
         offset: 42      # start at 43
@@ -30,7 +32,7 @@
 
 
     - name: make a call to the resource berry
-      pokeapi_info:
+      rzfeeser.pokeapi.pokeapi_info:
         resource: berry
       register: results
 
