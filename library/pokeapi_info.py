@@ -78,22 +78,12 @@ import requests
 def run_module():
     # define available arguments/parameters a user can pass to the module
     module_args = dict(
-        name=dict(type='str', required=True),
+        name=dict(type='str', required=False),
         resource=dict(type='str', required=True),
         limit=dict(type='int', required=False),
         offset=dict(type='int', required=False)
     )
 
-    # seed the result dict in the object
-    # we primarily care about changed and state
-    # changed is if this module effectively modified the target
-    # state will include any data that you want your module to pass back
-    # for consumption, for example, in a subsequent task
-    result = dict(
-        changed=False,
-        pokeapi_json='',
-        status_code=''
-    )
 
     # the AnsibleModule object will be our abstraction working with Ansible
     # this includes instantiation, a couple of common attr would be the
@@ -104,13 +94,37 @@ def run_module():
         supports_check_mode=True
     )
 
+
+    # seed the result dict in the object
+    # we primarily care about changed and state
+    # changed is if this module effectively modified the target
+    # state will include any data that you want your module to pass back
+    # for consumption, for example, in a subsequent task
+    result = dict(
+        changed=False,
+        pokeapi_json='',
+        status_code='',
+        name=module.params.get('name'),
+        resource=module.params.get('resource'),
+        limit=module.params.get('limit'),
+        offset=module.params.get('offset')
+    )
+
+
+
+
     # if the user is working with this module in only check mode we do not
     # want to make any changes to the environment, just return the current
     # state with no modifications
     if module.check_mode:
         module.exit_json(**result)
 
-    poke_url = f"https://pokeapi.co/api/v2/{{ module.params['resource'] }}/{{ module.params['name'] }}?"
+    poke_url = f"https://pokeapi.co/api/v2/{ module.params['resource'] }"
+
+    if module.params['name']:
+        poke_url = f"{ poke_url }/{ module.params['name'] }?"
+    else:
+        poke_url = f"{ poke_url }?"
 
     # did they include a limit parameter
     if module.params['limit']:
