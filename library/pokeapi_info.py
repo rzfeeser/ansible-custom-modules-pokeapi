@@ -71,8 +71,9 @@ message:
 
 from ansible.module_utils.basic import AnsibleModule
 
-# remove this 3rd party dependency
-import requests
+# standard library
+import urllib.request
+import json
 
 
 def run_module():
@@ -119,6 +120,8 @@ def run_module():
     if module.check_mode:
         module.exit_json(**result)
 
+
+
     poke_url = f"https://pokeapi.co/api/v2/{ module.params['resource'] }"
 
     if module.params['name']:
@@ -132,17 +135,27 @@ def run_module():
     if module.params['offset']:
         poke_url = f"{poke_url}offset={module.params['offset']}&"
 
-    
-    resp = requests.get(poke_url)
-    
-    pokemon_info = resp.json()
+   
+    # prepare to call the api
+    # we must include a header to make our script appear as if the request is coming from a browser
+    req = urllib.request.Request(
+        url=poke_url,
+        headers={"User-Agent": "Mozilla/5.0"}
+        )
 
-    # manipulate or modify the state as needed (this is going to be the
-    # part where your module will do what it needs to do)
-    
+    # call the API
+    pokeresp = urllib.request.urlopen(req)
 
+    # strip off the attachment (JSON) and read it
+    # the problem here, is that it will read out as a bytes-like string
+    # therefore we translate it to UTF-8
+    pokemon_info = pokeresp.read()
+    pokemon_info = json.loads(pokemon_info.decode("utf-8"))
+
+
+    # assign data to our results (returned JSON)
     result['pokeapi_json'] = pokemon_info
-    result['status_code'] = resp.status_code
+    result['status_code'] = pokeresp.code
 
     # in the event of a successful module execution, you will want to
     # simple AnsibleModule.exit_json(), passing the key/value results
