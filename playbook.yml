@@ -15,3 +15,14 @@
     - name: display pokemon results
       ansible.builtin.debug:
         var: results
+
+    - name: make a call to pokeapi with limit of 10 and offset of 100
+      pokeapi_info:
+        resource: pokemon
+        limit: 100
+        offset: 42
+      register: results
+
+    - name: display pokemon results
+      ansible.builtin.debug:
+        var: results
