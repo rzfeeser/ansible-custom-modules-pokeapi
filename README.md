@@ -60,5 +60,8 @@ This repository is an ansible collection, `rzfeeser.pokeapi`, written by @RZFees
       type: int
 
 
+### About PokeAPI.co REST API
+Visit [PokeAPI.co](https://pokeapi.co/) for more information about the project.
+
 ### About the Author
-I'm an consultant and technology trainer focusing on Ansible, Python, AWX/Tower/AAP, Terraform, Go, Azure, 5G and core telecom communications. If you're interested in discussing a consulting or training project, feel free to reach out.
+Russell Zachary Feeser (@RZFeeser) is a consultant and technology trainer focusing on Ansible, Python, AWX/Tower/AAP, Terraform, Go, Azure, 5G and core telecom communications. If you're interested in discussing a consulting or training project, feel free to reach out.
