@@ -1,5 +1,9 @@
 # rzfeeser.pokeapi - PokeAPI.co Ansible Collection
-This repository is an ansible collection, `rzfeeser.pokeapi`, written by @RZFeeser for the purposes of an Ansible collection containing plugins and and playbooks that abstract interaction with API v2 service @ [pokeapi.co](https://pokeapi.co/)
+Author: Russell Zachary Feeser  
+GitHub: @RZFeeser  
+ Email: rzfeeser@users.noreply.github.com  
+
+This repository is an ansible collection, `rzfeeser.pokeapi`, written by @RZFeeser for the purposes of an Ansible collection containing plugins and playbooks that abstract interaction with API v2 service @ [pokeapi.co](https://pokeapi.co/)
 
 
 #### Resources
@@ -14,7 +18,6 @@ This repository is an ansible collection, `rzfeeser.pokeapi`, written by @RZFees
   1. Install directly from source on GitHub
   2. Proxied from ansible.galaxy.com
   3. Bypass a direct install, and instead use the PokeAPI Execution Environment container based solution (suitable for CI engines such as AAP, Tower, AWX, 56o0Jenkins, GitLab, and so on)
-
 
 ##### Option 01 - Install directly from source on Github
 - Ansible should already be installed
@@ -31,4 +34,5 @@ This repository is an ansible collection, `rzfeeser.pokeapi`, written by @RZFees
 - Use `ansible-runner` to run a playbook containing references to the `rzfeeser.pokeapi` collection - `ansible-runner run --process-isolation --process-isolation-executable docker --container-image registry.gitlab.com/rzfeeser/ansible-execution-environments/pokeapi-ee -p playbook_to_run.yml .`
 
 
-
+##### About the Author
+I'm an consultant and technology trainer focusing on Ansible, Python, AWX/Tower/AAP, Terraform, Go, Azure, 5G and core telecom communications. If you're interested in discussing a consulting or training project, feel free to reach out.
