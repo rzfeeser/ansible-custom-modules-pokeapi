@@ -1,7 +1,8 @@
 # rzfeeser.pokeapi - PokeAPI.co Ansible Collection
 Author: Russell Zachary Feeser  
 GitHub: @RZFeeser  
- Email: rzfeeser@users.noreply.github.com  
+ Email: rzfeeser@users.noreply.github.com
+Galaxy: https://galaxy.ansible.com/rzfeeser/pokeapi
 
 ![rzfeeser.pokeapi Pokemon Banner](https://github.com/rzfeeser/ansible-custom-modules-pokeapi/blob/main/docs/images/pokeapi_graphic.png?raw=true)
 
