@@ -21,7 +21,7 @@ authors:
 
 ### OPTIONAL but strongly recommended
 # A short summary description of the collection
-description: rzfeeser.pokeapi enables Ansible users to easily query `pokeapi.co/api/v2/<resource>/<name>?offset=<offset>&limit=<limit>` where `<name>`, `<offset>`, and `<limit>` are optional. Be sure to `register` the results to make them usable.
+description: Gotta Catch em All! Easily query the PokeAPI with this abstraction.
 
 # Either a single license or a list of licenses for content inside of a collection. Ansible Galaxy currently only
 # accepts L(SPDX,https://spdx.org/licenses/) licenses. This key is mutually exclusive with 'license_file'
