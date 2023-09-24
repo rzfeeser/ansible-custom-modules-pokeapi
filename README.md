@@ -3,7 +3,7 @@ Author: Russell Zachary Feeser
 GitHub: @RZFeeser  
  Email: rzfeeser@users.noreply.github.com  
 
-![rzfeeser.pokeapi Pokemon Banner](docs/images/pokeapi_graphic.png)
+![rzfeeser.pokeapi Pokemon Banner](https://github.com/rzfeeser/ansible-custom-modules-pokeapi/blob/main/docs/images/pokeapi_graphic.png?raw=true)
 
 This repository is an ansible collection, `rzfeeser.pokeapi`, written by @RZFeeser for the purposes of an Ansible collection containing plugins and playbooks that abstract interaction with API v2 service @ [pokeapi.co](https://pokeapi.co/)
 
