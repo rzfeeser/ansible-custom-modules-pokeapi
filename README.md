@@ -19,7 +19,7 @@ This repository is an ansible collection, `rzfeeser.pokeapi`, written by @RZFees
 - This is an Ansible collection and may be installed using one of the following methods:
   1. Install directly from source on GitHub
   2. Proxied from ansible.galaxy.com
-  3. Bypass a direct install, and instead use the PokeAPI Execution Environment container based solution (suitable for CI engines such as AAP, Tower, AWX, 56o0Jenkins, GitLab, and so on)
+  3. Bypass a direct install, and instead use the PokeAPI Execution Environment container based solution (suitable for CI engines such as AAP/Tower/AWX, Jenkins, GitLab, and so on)
 
 #### Option 01 - Install directly from source on Github
 - Ansible should already be installed
