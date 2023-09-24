@@ -40,23 +40,23 @@ This repository is an ansible collection, `rzfeeser.pokeapi`, written by @RZFees
 - The module `rzfeeser.pokeapi.pokeapi_info` may be used to make API requests to pokeapi.co/api/v2/. This module was written to simplify interaction with pokeapi.co/v2 API. See pokeapi.co for documentation on using the v2 API. It has the following options:
 
 
-`rzfeeser.pokeapi.pokeapi_info` has the following options:
-- resource:
-    description: This is the resource to lookup. See pokeapi.co/docs/v2 for all possible values. Values include 'ability', 'berry', 'berry-firmness', 'berry-flavor', 'characteristic', 'contest-effect', 'contest-type', 'egg-group', 'encounter-condition', 'encounter-condition-value', 'encounter-method', 'evolution-chain', 'evolution-trigger', 'gender', 'generation', 'growth-rate', 'item', 'item-attribute', 'item-category', 'item-fling-effect', 'item-pocket', 'language', 'location', 'location-area', 'machine', 'move', 'move-ailment', 'move-battle-style', 'move-category', 'move-damage-class', 'move-learn-method', 'move-target', 'nature', 'pal-park-area', 'pokeathlon-stat', 'pokedex', 'pokemon', 'pokemon-color', 'pokemon-form', 'pokemon-habitat', 'pokemon-shape', 'pokemon-species', 'region', 'stat', 'super-contest-effect', 'type', 'version', 'version-group'
-    required: true
-    type: str
-- name:
-    description: The name of the resource to lookup. See pokeapi.co/docs/v2 for all possible values.
-    required: false
-    type: str
-- limit:
-    description: The number of results that will be returned with the lookup.
-    required: false
-    type: int
-- offset:
-    description: The resource index + 1 to begin at. For example, If 42 is passed, then resource 43 will be the first result returned.
-    required: false
-    type: int
+- `rzfeeser.pokeapi.pokeapi_info` has the following options:
+  - **resource**:
+      description: This is the resource to lookup. See pokeapi.co/docs/v2 for all possible values. Values include 'ability', 'berry', 'berry-firmness', 'berry-flavor', 'characteristic', 'contest-effect', 'contest-type', 'egg-group', 'encounter-condition', 'encounter-condition-value', 'encounter-method', 'evolution-chain', 'evolution-trigger', 'gender', 'generation', 'growth-rate', 'item', 'item-attribute', 'item-category', 'item-fling-effect', 'item-pocket', 'language', 'location', 'location-area', 'machine', 'move', 'move-ailment', 'move-battle-style', 'move-category', 'move-damage-class', 'move-learn-method', 'move-target', 'nature', 'pal-park-area', 'pokeathlon-stat', 'pokedex', 'pokemon', 'pokemon-color', 'pokemon-form', 'pokemon-habitat', 'pokemon-shape', 'pokemon-species', 'region', 'stat', 'super-contest-effect', 'type', 'version', 'version-group'
+      required: true
+      type: str
+  - **name**:
+      description: The name of the resource to lookup. See pokeapi.co/docs/v2 for all possible values.
+      required: false
+      type: str
+  - **limit**:
+      description: The number of results that will be returned with the lookup.
+      required: false
+      type: int
+  - **offset**:
+      description: The resource index + 1 to begin at. For example, If 42 is passed, then resource 43 will be the first result returned.
+      required: false
+      type: int
 
 
 ##### About the Author
