@@ -12,6 +12,7 @@ This repository is an ansible collection, `rzfeeser.pokeapi`, written by @RZFees
 - [@GitHub - rzfeeser/ansible-custom-modules-pokeapi](https://github.com/rzfeeser/ansible-custom-modules-pokeapi)
 - [@GitLab - PokeAPI Ansible Execution Environment](https://gitlab.com/rzfeeser/ansible-execution-environments)
 - [pokeapi.co](https://pokeapi.co/)
+- [Ansible Galaxy - rzfeeser.pokeapi](https://galaxy.ansible.com/rzfeeser/pokeapi)
 
 
 ### Install Notes
