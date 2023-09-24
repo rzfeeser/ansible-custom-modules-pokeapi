@@ -59,5 +59,5 @@ This repository is an ansible collection, `rzfeeser.pokeapi`, written by @RZFees
       type: int
 
 
-#### About the Author
+### About the Author
 I'm an consultant and technology trainer focusing on Ansible, Python, AWX/Tower/AAP, Terraform, Go, Azure, 5G and core telecom communications. If you're interested in discussing a consulting or training project, feel free to reach out.
