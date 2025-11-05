@@ -1,0 +1,3 @@
+---
+# defaults file for build_pokemon_dictionary
+name_of_pokemon_to_lookup: pikachu       # default is pikachu

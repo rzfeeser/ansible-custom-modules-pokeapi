@@ -1,0 +1,18 @@
+---
+# tasks file for build_pokemon_dictionary
+- name: make a call to pokeapi
+  rzfeeser.pokeapi.pokeapi_info:
+    resource: pokemon      # (group) describes the resource or group within the pokeapi.co service the user wants
+    name: "{{ name_of_pokemon_to_lookup }}"          # (id) describes the name or id within the resource to search on
+  register: results
+
+- name: display pokemon results
+  ansible.builtin.debug:
+    var: results
+    verbosity: 1   # -v
+
+- name: build a pokemon dictionary locally
+  ansible.builtin.lineinfile:
+    path: pokemon_dictionary.txt
+    line: "{{ results }}"
+    create: yes
