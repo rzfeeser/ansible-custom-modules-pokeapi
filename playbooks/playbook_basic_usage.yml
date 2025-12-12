@@ -17,7 +17,7 @@
         var: results
 
 
-    - name: make a call to pokeapi with limit of 10 and offset of 100
+    - name: make a call to pokeapi with limit of 100 and offset of 42
       rzfeeser.pokeapi.pokeapi_info:
         resource: pokemon
         limit: 100      # stop at 142 (limit to 100 results)
