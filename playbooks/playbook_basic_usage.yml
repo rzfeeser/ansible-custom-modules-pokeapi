@@ -4,8 +4,6 @@
   hosts: localhost
   gather_facts: false
 
-  collections:
-    - rzfeeser.pokeapi
 
   tasks:
     - name: make a call to pokeapi
