@@ -17,7 +17,7 @@ permissions:
 
 env:
   # Change these two if you want a different image name/tag strategy.
-  IMAGE_NAME: ansible-ee
+  IMAGE_NAME: poke-ee
   IMAGE_TAG: latest
 
 jobs:
