@@ -35,7 +35,7 @@ This repository is an ansible collection, `rzfeeser.pokeapi`, written by @RZFees
 - `ansible-runner` needs to be installed, and Docker needs to exist
   - It should be mentioned that `ansible-runner` requires a special project directory layout before executing. See the [ansible-runner Project Homepage](https://ansible.readthedocs.io/projects/runner/en/stable/index.html) for more information
 - An Ansible Execution Environment container is maintained by this author, [@RZFeeser GitHub Package Repository](https://github.com/rzfeeser/ansible-custom-modules-pokeapi/pkgs/container/poke-ee). This solution includes Ansible, Python, Ansible-Runner, and the most recent `rzfeeser.pokeapi` collection
-- Use `ansible-runner` to run a playbook containing references to the `rzfeeser.pokeapi` collection - `ansible-runner run --process-isolation --process-isolation-executable docker --container-image ghcr.io/rzfeeser/poke_ee -p playbook_to_run.yml .`
+- Use `ansible-runner` to run a playbook containing references to the `rzfeeser.pokeapi` collection - `ansible-runner run --process-isolation --process-isolation-executable docker --container-image ghcr.io/rzfeeser/ansible-custom-modules-pokeapi/poke-ee:latest -p playbook_to_run.yml .`
 
 
 ### How to Use
