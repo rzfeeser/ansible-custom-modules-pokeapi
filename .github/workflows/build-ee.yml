@@ -51,7 +51,8 @@ jobs:
         id: img
         run: |
           OWNER_LC="$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')"
-          IMAGE="ghcr.io/${OWNER_LC}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"
+          REPO_LC="$(echo "${{ github.event.repository.name }}" | tr '[:upper:]' '[:lower:]')"
+          IMAGE="ghcr.io/${OWNER_LC}/${REPO_LC}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}"
           echo "image=${IMAGE}" >> "$GITHUB_OUTPUT"
 
         # removed from above... use this if you want to include repo name in container
